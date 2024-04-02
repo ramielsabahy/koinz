@@ -2,13 +2,13 @@
 
 namespace App\Services;
 
+use App\Models\UserBookInterval;
+
 class BookService
 {
-    /**
-     * Create a new class instance.
-     */
-    public function __construct()
+    public function store(array $data)
     {
-        //
+        return UserBookInterval::updateOrCreate($data);
     }
 }
+
