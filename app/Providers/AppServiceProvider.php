@@ -2,6 +2,13 @@
 
 namespace App\Providers;
 
+use App\Events\IntervalSubmited;
+use App\Listeners\IntervalSubmitedListener;
+use App\Services\MockySMSProviderA;
+use App\Services\MockySMSProviderB;
+use App\Services\SendingSMSService;
+use App\Services\SMSProviderInterface;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+//        $this->app->bind(SMSProviderInterface::class, SendingSMSService::class);
     }
 
     /**
@@ -19,6 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Event::listen(IntervalSubmited::class, IntervalSubmitedListener::class);
     }
 }
