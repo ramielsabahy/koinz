@@ -6,5 +6,8 @@ use App\Http\Middleware\CheckBearerToken;
 
 Route::group(['namespace' => 'App\Http\Controllers\Api'], function (){
     Route::post('login', 'AuthenticationController@login');
-    Route::post('interval', 'IntervalController@store')->middleware([CheckBearerToken::class, 'auth:sanctum']);
+    Route::group(['middleware' => [CheckBearerToken::class, 'auth:sanctum']], function (){
+        Route::post('interval', 'IntervalController@store');
+        Route::get('recommendation', 'RecommendationController@index');
+    });
 });

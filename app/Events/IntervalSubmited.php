@@ -2,6 +2,8 @@
 
 namespace App\Events;
 
+use App\Models\Book;
+use App\Services\IncrementIntervalService;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -17,7 +19,7 @@ class IntervalSubmited
     /**
      * Create a new event instance.
      */
-    public function __construct(public $phone, public $message)
+    public function __construct(public $phone, public $message, public Book $book, public array $interval)
     {
         //
     }

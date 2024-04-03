@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Book;
 use App\Models\UserBookInterval;
 
 class BookService

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('pages');
+            $table->integer('total_read_pages')->default(0);
             $table->timestamps();
         });
     }

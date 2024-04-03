@@ -18,7 +18,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-//        $this->app->bind(SMSProviderInterface::class, SendingSMSService::class);
+        $this->app->bind(SMSProviderInterface::class, MockySMSProviderA::class);
+        $this->app->bind(SMSProviderInterface::class, MockySMSProviderB::class);
     }
 
     /**

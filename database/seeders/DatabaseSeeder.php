@@ -16,5 +16,8 @@ class DatabaseSeeder extends Seeder
     {
         Book::factory(20)->create();
         User::factory(10)->create();
+        $this->call([
+            UserBookIntervalSeeder::class
+        ]);
     }
 }
