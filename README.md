@@ -45,3 +45,6 @@ What do you need to get the project up and running ?
 - tatyana55@example.com
 - tyreek16@example.net
 - willms.elyse@example.com
+
+
+### Please note that the SMS API that you provided is getting 503 `Service Unavailable` So i used another mocking API
