@@ -32,3 +32,16 @@ What do you need to get the project up and running ?
 - I made a simple postman automation to get the token and store it for any other request
 - Collection link [https://documenter.getpostman.com/view/18596546/2sA35K2g55](https://documenter.getpostman.com/view/18596546/2sA35K2g55)
 - I added samples for each response case (Login successful, Login failed ...etc)
+
+## For testing with postman you can use the following user (all the passwords are `password`)
+
+- ehayes@example.org
+- ferne.turner@example.net
+- jammie.price@example.com
+- jennyfer.vonrueden@example.com
+- jerrell.ortiz@example.net
+- kshlerin.eliza@example.com
+- ngislason@example.org
+- tatyana55@example.com
+- tyreek16@example.net
+- willms.elyse@example.com
