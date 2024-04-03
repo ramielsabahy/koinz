@@ -6,11 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\LoginRequest;
 use App\Http\Resources\Api\UserResource;
 use App\Services\LoginService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
 class AuthenticationController extends Controller
 {
-    public function login(LoginRequest $request, LoginService $loginService)
+    public function login(LoginRequest $request, LoginService $loginService): JsonResponse
     {
         $user = $loginService->execute($request->validated());
 

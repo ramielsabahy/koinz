@@ -9,13 +9,14 @@ use App\Models\Book;
 use App\Services\BookService;
 use App\Services\IncrementIntervalService;
 use App\Services\SendingSMSService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Event;
 
 class IntervalController extends Controller
 {
-    public function store(StoreIntervalRequest $request, BookService $service, IncrementIntervalService $intervalService)
+    public function store(StoreIntervalRequest $request, BookService $service, IncrementIntervalService $intervalService): JsonResponse
     {
         $validatedData = $request->validated();
         $intervalService->increment($request->book, $validatedData);
